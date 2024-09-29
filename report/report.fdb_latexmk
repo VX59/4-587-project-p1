@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1727644916.10703 "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" "report.pdf" "report" 1727644918.50583 0
-  "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" 1727644911.13891 13968 cca9e7a147f3facf32ea91c6d105b9ad ""
+["pdflatex"] 1727646681.61111 "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" "report.pdf" "report" 1727646684.45091 0
+  "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" 1727646677.61451 18430 590a4b655f99fea658c495311ce1a0a9 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc" 1490131464 2933 8d808fcabf70c6c809bb14c283ece4da ""
@@ -163,11 +163,14 @@
   "figures/corr.png" 1727626870.10188 87557 7ae6f2091eb9f919e5c57a583187eb2a ""
   "figures/multivar.png" 1727626861.08988 237549 db8ab17dde8b5bc2c335f65f197d871e ""
   "figures/outlier.png" 1727626897.84664 117394 6bea5084217603313e98ded68ab0882d ""
+  "figures/polydensity.png" 1727646404.4931 196989 142ee77679e96d1999ac433acd8bf439 ""
+  "figures/unitig_corr.png" 1727646121.32623 59605 416480e73fc09798c77e02f17e71e298 ""
   "figures/unitigdis.png" 1727644905.17153 37582 a0d23c5803cd5e4be8f88a1b24f9a5c3 ""
+  "figures/unitighist.png" 1727645970.18066 81885 5258c158701025e3f73909688c862771 ""
   "figures/univar.png" 1727626848.7134 182755 7c9e8f1874af7b84163187989205696b ""
-  "report.aux" 1727644918.41093 1901 f15797201e0b9df3d0bdb22bb923c4f6 "pdflatex"
-  "report.out" 1727644918.41445 720 ea523352d6e54b3d1cc7876b558d4f27 "pdflatex"
-  "report.tex" 1727644911.13891 13968 cca9e7a147f3facf32ea91c6d105b9ad ""
+  "report.aux" 1727646684.26398 2645 901c53daee0e94d421133dfa995e3331 "pdflatex"
+  "report.out" 1727646684.266 720 ea523352d6e54b3d1cc7876b558d4f27 "pdflatex"
+  "report.tex" 1727646677.61451 18430 590a4b655f99fea658c495311ce1a0a9 ""
   (generated)
   "report.aux"
   "report.log"

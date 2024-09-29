@@ -206,16 +206,76 @@ key variables, this project serves as a step towards more advanced research on a
     \item[8.] Pairwise correlation detection between features - visualize the parwise relationship between each numeric feature to help us identify 
     potential features we can engineer and expose high impact features. See "pairwisefeatures.png". Image too large to embed. 
 
+    \item[9.] Eliminate non intersecting entries between datasets and evaluate unitig presence in samples and their correlation to the labels. - This step simplifies the data from the unitig files 
+    and  may help our statistical model identify the super resistance rating for the strain.
 
     \item[10.] Visualize distribution of unitig presence - see figure 5
 
-         \begin{figure}[H]
+        \begin{figure}[H]
                 \centering
                 \vspace{-10pt}
                 \includegraphics[width=0.7\textwidth]{figures/unitigdis.png}
                 \caption{Outlier analysis.}
                 \vspace{-10pt}
         \end{figure}
+
+    \item[11.] Evaluate the Mean, Median, Mode, Std, Variance of Unitig Presence - see table 3.
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|l|l|l|l|l|l|}
+            \hline
+            \textbf{Column}       & \textbf{Mean}    & \textbf{Median}  & \textbf{Mode}  & \textbf{Std}     & \textbf{Variance} \\ \hline
+            azm presence          & 202.4542         & 203.0            & 204            & 8.8433           & 78.2038           \\ \hline
+            cip presence          & 4452.0450        & 4472.0           & 4512           & 168.6345         & 28437.5858        \\ \hline
+            cfx presence          & 4452.0450        & 4472.0           & 4512           & 168.6345         & 28437.5858        \\ \hline
+            \end{tabular}
+            \caption{Summary Statistics for azm, cip, and cfx presence}
+        \end{table}
+
+    \item[12.] Visualization of Unitig Presence - see figure 6
+        \begin{figure}[H]
+            \centering
+            \vspace{-10pt}
+            \includegraphics[width=0.7\textwidth]{figures/unitighist.png}
+            \caption{Outlier analysis.}
+            \vspace{-10pt}
+        \end{figure}
+
+    \item[13.] Determine correlation of newly engineered unitig features to our labels - see figure 7
+        \begin{figure}[H]
+            \centering
+            \vspace{-10pt}
+            \includegraphics[width=0.7\textwidth]{figures/unitig_corr.png}
+            \caption{Outlier analysis.}
+            \vspace{-10pt}
+        \end{figure}
+    \item[14.] Engineer polynomial features to expose potential nonlinear relationships - see table 4
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{azm\_mic\^{}2} & \textbf{log2\_azm\_mic\^{}2} & \textbf{azm\_presence\^{}2} & \textbf{cip\_mic\^{}2} & \textbf{log2\_cip\_mic\^{}2} & \textbf{cip\_presence\^{}2} & \textbf{cfx\_mic\^{}2} & \textbf{log2\_cfx\_mic\^{}2} & \textbf{cfx\_presence\^{}2} \\ \hline
+            1.640527e-07           & 0.083783                      & 0.567139                     & 9.765928e-10            & 0.009855                      & 0.704733                     & 0.000004                 & 0.095175                      & 0.688729                    \\ \hline
+            1.640527e-07           & 0.083783                      & 0.560958                     & 1.350796e-02            & 0.242330                      & 0.712201                     & 0.000004                 & 0.095175                      & 0.697311                    \\ \hline
+            5.266821e-08           & 0.063883                      & 0.466663                     & 4.334373e-03            & 0.878655                      & 0.561820                     & 0.000018                 & 0.121591                      & 0.566373                    \\ \hline
+            1.640527e-07           & 0.068611                      & 0.554810                     & 4.785306e-08            & 0.059880                      & 0.748038                     & 0.000003                 & 0.090796                      & 0.697311                    \\ \hline
+            9.765910e-10           & 0.010527                      & 0.560958                     & 9.765928e-10            & 0.009855                      & 0.704394                     & 0.000004                 & 0.095175                      & 0.714635                    \\ \hline
+            \end{tabular}
+            \caption{Squared values for azm, cip, and cfx features}
+        \end{table}
+        
+    \item[15.] Identify engineered features with a high correlation to the labels, visualize the density and distribution of these features - see figure 8
+
+         \begin{figure}[H]
+            \centering
+            \vspace{-10pt}
+            \includegraphics[width=0.7\textwidth]{figures/polydensity.png}
+            \caption{Outlier analysis.}
+            \vspace{-10pt}
+        \end{figure}
+    
+    \item[16.] Visualize pairwise correlation between polynomial peatures - see "polypair.png". Image too large to embed.
+        
 
 
 
