@@ -63,8 +63,8 @@ key variables, this project serves as a step towards more advanced research on a
         \item[1.] Removed all rows that were NaN in our target label field - Our target labels we aim to predict down the line
         are: azm\_sr, cfx\_sr, and cip\_sr. If the labels were missing, then we cannot use that row.
 
-        \item[2.] Removed unused columns - The dataset contained multiple types of resistances. Because we only focus on 3, the rest cannot
-        can be discarded safely. We also use this step to remove the year column.
+        \item[2.] Removed unused columns - The dataset contained multiple types of resistances. Because we only focus on 3, the rest can
+        can be discarded safely. We also use this step to remove the year column. This is because these features will have no impact on our results.
 
         \item[3.] Removed duplicate rows - Duplicate rows have the ability to skew our data. As such we removed all duplicate rows.
         
@@ -73,7 +73,7 @@ key variables, this project serves as a step towards more advanced research on a
 
         \item[5.] Turned all non-numeric data within numerical columns into NaN, to be processed later - We have columns that are
         supposed to contain only numerical data, however, there are rows where there are letters in there. In this step, we turn them
-        into NaN.
+        into NaN. This is because we will impute all NaNs later on.
 
         \item[6.] Cast all numerical columns into float32 - To establish precision.
         \item[7.] One hot encode categorical columns - Some columns such as "country" should be one hot encoded as we would want
@@ -97,7 +97,9 @@ key variables, this project serves as a step towards more advanced research on a
 \begin{itemize}
     \item[1.] Calculate what percentage of rows correspond to specific labels - We found that 0.1779 of samples have resistance to azm, 
     0.0911 of samples have resistance to cfx, and 0.5353 of samples have resistance to cip.
-    \item[2.] We calculated the mean, median, and mode, standard deviation, and variance for all numerical columns - See table 1.
+    \item[2.] We calculated the mean, median, and mode, standard deviation, and variance for all numerical columns. 
+    Calculating the mean, median, mode, standard deviation, and variance for numerical columns is important for understanding the tendencies, spread, and variability of the data,
+    which can help with data analysis and modeling. - See table 1.
     \begin{table}[H]
         \centering
         \begin{tabular}{|l|l|l|l|l|}
@@ -126,7 +128,8 @@ key variables, this project serves as a step towards more advanced research on a
         \end{tabular}
         \caption{Summary Statistics for Antibiotic Resistance Data}
     \end{table}
-    \item[3.] Univariate Analysis - We examined the feature distribution for each numerical column. This is to gain a better insight into our features - See figure 1.
+    \item[3.] Univariate Analysis - We examined the feature distribution for each numerical column. This gives us crucial insights into individual feature behavior 
+    and will help in selecting appropriate preprocessing and model techniques. - See figure 1.
             \begin{figure}[H]
                 \centering
                 \vspace{-10pt}
@@ -135,8 +138,8 @@ key variables, this project serves as a step towards more advanced research on a
                 \vspace{-10pt}
             \end{figure}
 
-    \item[4.] Multivariate Analysis - We examine each feature with respect to the labels we are interested in. This is to get a better insight to how our
-    features relate to our labels - See figure 2.
+    \item[4.] Multivariate Analysis - We examine each feature with respect to the labels we are interested in. This helps in identifying potential correlations and
+    patterns that can be useful for predicting the labels, and gives insights into the relationships between variables and the targets. - See figure 2.
             \begin{figure}[H]
                 \centering
                 \vspace{-10pt}
@@ -156,7 +159,7 @@ key variables, this project serves as a step towards more advanced research on a
             \end{figure}
 
     \item[6.] Feature Extraction - Based on the correlation matrix generated from previous step and the visualizations beforehands, we extract a list of the most
-    impactful features for every target label - See table 2.
+    impactful features for every target label. This is useful because with a smaller subset of features we can run larger models for the same computational cost. - See table 2.
             \begin{table}[H]
                 \centering
                 \begin{tabular}{|l|l|l|}
@@ -190,7 +193,8 @@ key variables, this project serves as a step towards more advanced research on a
                 \caption{Impactful features and their correlation with different target variables. Note, "Group" is a feature.}
             \end{table}
 
-    \item[7.] Outlier detection and removal - We visualized the outliers within our data and subsequently remove them - See figure 4.
+    \item[7.] Outlier detection and removal - We visualized the outliers within our data and subsequently remove them. This is important because outliers
+    have the potential to skew our data. We want a model that generalizes well. - See figure 4.
             \begin{figure}[H]
                 \centering
                 \vspace{-10pt}

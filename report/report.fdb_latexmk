@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1727628359.69323 "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" "report.pdf" "report" 1727628361.92846 0
-  "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" 1727628354.58516 12653 67e990f88cc7736b06bfc78ce75fdbba ""
+["pdflatex"] 1727629833.30703 "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" "report.pdf" "report" 1727629835.55452 0
+  "/mnt/f/Coding/587/4-587-project-p1/report/report.tex" 1727629831.8179 13437 25e25f6a8c79c8b34f0edbfadaff2e15 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc" 1490131464 2933 8d808fcabf70c6c809bb14c283ece4da ""
@@ -164,9 +164,9 @@
   "figures/multivar.png" 1727626861.08988 237549 db8ab17dde8b5bc2c335f65f197d871e ""
   "figures/outlier.png" 1727626897.84664 117394 6bea5084217603313e98ded68ab0882d ""
   "figures/univar.png" 1727626848.7134 182755 7c9e8f1874af7b84163187989205696b ""
-  "report.aux" 1727628361.79877 1765 fb2c2c2dced514146d99b2ab05e67655 "pdflatex"
-  "report.out" 1727628361.79977 720 ea523352d6e54b3d1cc7876b558d4f27 "pdflatex"
-  "report.tex" 1727628354.58516 12653 67e990f88cc7736b06bfc78ce75fdbba ""
+  "report.aux" 1727629835.46736 1765 abe7bca8a48ac2c4efa1cf867ed09d6a "pdflatex"
+  "report.out" 1727629835.46937 720 ea523352d6e54b3d1cc7876b558d4f27 "pdflatex"
+  "report.tex" 1727629831.8179 13437 25e25f6a8c79c8b34f0edbfadaff2e15 ""
   (generated)
   "report.aux"
   "report.log"
