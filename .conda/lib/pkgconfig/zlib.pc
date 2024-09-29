@@ -1,0 +1,13 @@
+prefix=/mnt/f/Coding/587/4-587-project-p1/.conda
+exec_prefix=/mnt/f/Coding/587/4-587-project-p1/.conda
+libdir=/mnt/f/Coding/587/4-587-project-p1/.conda/lib
+sharedlibdir=/mnt/f/Coding/587/4-587-project-p1/.conda/lib
+includedir=/mnt/f/Coding/587/4-587-project-p1/.conda/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

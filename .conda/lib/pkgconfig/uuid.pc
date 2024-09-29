@@ -1,0 +1,11 @@
+prefix=/mnt/f/Coding/587/4-587-project-p1/.conda
+exec_prefix=/mnt/f/Coding/587/4-587-project-p1/.conda
+libdir=/mnt/f/Coding/587/4-587-project-p1/.conda/lib
+includedir=/mnt/f/Coding/587/4-587-project-p1/.conda/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.32.1
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid

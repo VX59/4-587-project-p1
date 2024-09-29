@@ -1,0 +1,5 @@
+#!/mnt/f/Coding/587/4-587-project-p1/.conda/bin/python3.11
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()
