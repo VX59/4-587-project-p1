@@ -1,8 +1,7 @@
 
-\documentclass[manuscript,screen,review]{acmart}
+\documentclass[manuscript,screen,review, nonacm]{acmart}
 
-\settopmatter{printacmref=false} %Removes the ACM reference format (which includes DOI)
-\renewcommand\footnotetextcopyrightpermission[1]{} %Removes the footnote with the conference info
+
 
 
 %%
@@ -56,6 +55,39 @@ key variables, this project serves as a step towards more advanced research on a
 
 
 \section{Data Cleaning/Processing}
+
+    We have completed 11 total unique data cleaning and processing steps:
+
+    \begin{itemize}
+        \item[1.] Removed all rows that were NaN in our target label field - Our target labels we aim to predict down the line
+        are: azm\_sr, cfx\_sr, and cip\_sr. If the labels were missing, then we cannot use that row.
+
+        \item[2.] Removed unused columns - The dataset contained multiple types of resistances. Because we only focus on 3, the rest cannot
+        can be discarded safely. We also use this step to remove the year column.
+
+        \item[3.] Removed duplicate rows - Duplicate rows have the ability to skew our data. As such we removed all duplicate rows.
+        
+        \item[4.] Removed all symbols - Our data are either numerical or categorical (text). There is no need for symbols which will
+        only cause problems down the line.
+
+        \item[5.] Turned all non-numeric data within numerical columns into NaN, to be processed later - We have columns that are
+        supposed to contain only numerical data, however, there are rows where there are letters in there. In this step, we turn them
+        into NaN.
+
+        \item[6.] Cast all numerical columns into float32 - To establish precision.
+        \item[7.] One hot encode categorical columns - Some columns such as "country" should be one hot encoded as we would want
+        numerical representations of all our data for modelling.
+        \item[8.] Handle "Beta.lactamase" special case - It is a numerical column but appears to be categorical in nature. As such
+        we cannot impute missing values like with the other numerical columns. In this step, we set all missing entries to 0, and
+        one hot encode the feature like with the non-numerical columns.
+        \item[9.] Split dataframe into Train/Test - We will be doing additional data processing such as normalization and imputation later on.
+        As such, we need to make the split beforehands for good practice in preventing leakage.
+        \item[10.] Impute missing values in numerical columns - For every NaN in the numerical columns, we use skew based imputation to
+        generate a new value that can substitute the NaN. This ensures that we have enough data to work with as we do not need to discard the entire row.
+        \item[11.] Normalize all numerical columns - We do columnwise normalization on numerical columns. This is to ensure that we do not have extremely
+        large values. This is important for modelling down the line. 
+
+    \end{itemize}
 
 
 
