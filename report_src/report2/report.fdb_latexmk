@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1729456806.37059 "/mnt/f/Coding/587/4-587-project-p1/report_src/report2/report.tex" "report.pdf" "report" 1729456808.26966 0
-  "/mnt/f/Coding/587/4-587-project-p1/report_src/report2/report.tex" 1729456804.97476 11664 5307d4e4e627def4114dbd243c31c877 ""
+["pdflatex"] 1729458060.85021 "/mnt/f/Coding/587/4-587-project-p1/report_src/report2/report.tex" "report.pdf" "report" 1729458062.97494 0
+  "/mnt/f/Coding/587/4-587-project-p1/report_src/report2/report.tex" 1729458059.74202 16967 453cce86199249cf08dd8e8dce0da99b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc" 1490131464 2933 8d808fcabf70c6c809bb14c283ece4da ""
@@ -175,9 +175,11 @@
   "figs/nn2.png" 1729453015.69267 39901 1b6b2b0918dca4e905746a97eecc811b ""
   "figs/svm1.png" 1729452995.9099 30749 7cee505659e2a5351b55399346adb5b3 ""
   "figs/svm2.png" 1729456223.75496 42131 66f636ce53022f0260a7545030647ea1 ""
-  "report.aux" 1729456808.12835 1925 31c872183d95a2861c419b51035fe5e0 "pdflatex"
-  "report.out" 1729456808.13036 116 c9aba74230dd02e7775fb45ffd170014 "pdflatex"
-  "report.tex" 1729456804.97476 11664 5307d4e4e627def4114dbd243c31c877 ""
+  "figs/xgb1.png" 1729453030.69547 29486 047971a06668a18710411502815736b3 ""
+  "figs/xgb2.png" 1729453037.97837 39714 75a33de5e50fc80dae853c78be86c9bd ""
+  "report.aux" 1729458062.80678 2431 780769ce8e0e06eb1432ea858888e881 "pdflatex"
+  "report.out" 1729458062.80879 417 d0fbec47e969bdc44d3c2f040558d733 "pdflatex"
+  "report.tex" 1729458059.74202 16967 453cce86199249cf08dd8e8dce0da99b ""
   (generated)
   "report.aux"
   "report.log"

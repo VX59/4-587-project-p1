@@ -38,7 +38,12 @@
 
 \section{Introduction}
 
-Following thorough data cleaning and exploratory data analysis, we identified 15 key predictor features. Our objective is to utilize these predictors to classify whether a given sample of *Neisseria gonorrhoeae* exhibits super resistance to specific antibiotics. In this study, resistance to azithromycin serves as the target label for our classification models. Since the target variable is binary (either true or false), we implemented and evaluated six different types of classifiers:
+Following thorough data cleaning and exploratory data analysis, we identified 15 key predictor 
+features. Our objective is to utilize these predictors to classify whether a given sample of 
+*Neisseria gonorrhoeae* exhibits super resistance to specific antibiotics. In this study, 
+resistance to azithromycin serves as the target label for our classification models. Since 
+the target variable is binary (either true or false), we implemented and evaluated six 
+different types of classifiers:
   
   \begin{itemize}
       \item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}{K-Nearest Neighbors}
@@ -288,5 +293,110 @@ network model are as follows:
 \end{figure}
 
 
+\section*{XGBoost}
+
+We included Xgboost as one of the models for our classification task. Xgboost 
+(Extreme Gradient Boosting) is a highly efficient and powerful implementation of 
+gradient boosting, designed to optimize both speed and performance. It is particularly
+well-suited for tabular data such as ours and has become one of the go-to competition algorithms 
+for many classification problems due to its ability to handle feature interactions, 
+missing data, and non-linear relationships.
+
+For our implementation, we used an Xgboost model with a logistic objective for binary 
+classification. We set the number of estimators to 100, with a maximum depth of 3 
+and a learning rate of 0.01 to control for overfitting and ensure smooth learning. 
+
+XGBoost delivered impressive results, achieving an accuracy of approximately 95.5\%. 
+This demonstrates the model’s ability to generalize well while maintaining strong 
+predictive performance. Our extended metrics for this XGBoost model are as follows:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}lc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Score} \\ \midrule
+        Accuracy  & 0.9551 \\
+        Precision & 0.9702 \\
+        Recall    & 0.9551 \\
+        F1 Score  & 0.9590 \\ \bottomrule
+    \end{tabular}
+    \caption{Performance Metrics for XGBoost}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{figs/xgb1.png}
+        \caption{XGBoost Predictions vs Ground Truth}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{figs/xgb2.png}
+        \caption{XGBoost ROC Curve}
+    \end{subfigure}
+    \caption{XGBoost}
+\end{figure}
+
+
+\section{Analysis}
+
+K-Nearest Neighbors, with 5 neighbors demonstrated the highest overall performance, 
+achieving an accuracy of 96.47\%, with a precision of 97.14\% and an F1 score of 
+96.67\%. This shows that KNN was effective in correctly predicting both true positives 
+and negatives, offering a balanced performance across all metrics. The high precision 
+shows that KNN minimizes false positives well.
+
+Naive bayes, though simple and computationally efficient, had a lower accuracy of 91.97\% 
+compared to other models, with a precision of 95.45\%. Despite this, Naive Bayes still 
+performed relatively well, particularly with a strong F1 score of 92.99\%, showing that it is 
+capable of achieving good results even with simplified assumptions of feature independence. 
+However, the lower recall shows that it may miss some true positives compared to the 
+higher-performing models.
+
+Logistic regression, with a max iteration limit of 10, provided decent performance with 
+an accuracy of 95.02\%, a precision of 96.82\%, and an F1 score of 95.50\%. Logistic 
+regression maintains a good balance between efficiency and predictive performance, 
+offering a reliable model that consistently performs well across various metrics. The slight 
+drop compared to KNN in recall suggests that Logistic Regression may have a higher chance 
+to miss some true positives.
+
+Support vector machine, also capped at 10 iterations, had the lowest overall performance. 
+It had an accuracy of 87.32\% and an F1 score of 89.11\%. While SVM is powerful for 
+high-dimensional data, its performance here indicates that it may have struggled with the 
+data’s complexity or structure, especially with the limited number of iterations, resulting 
+in a higher false positive rate compared to other models.
+
+The neural network, with a simple architecture, performed reasonably well with an 
+accuracy of 90.53\%, precision of 95.43\%, and an F1 score of 91.92\%. Neural networks 
+typically perform best at capturing non-linear relationships. While the model performed 
+fine, it did not outperform the more straightforward models like KNN or Logistic 
+Regression in this instance, possibly due to the limited number of epochs or the simplicity 
+of the architecture.
+
+Finally, XGBoost, known for its performance in tabular data, performed on par 
+with KNN, achieving an accuracy of 95.51\%, precision of 97.02\%, and an F1 score of 95.90\%. 
+XGBoost’s ability to handle complex feature interactions and provide strong generalization 
+explains why it performed at the top, closely competing with KNN in terms of predictive power. 
+It also maintained a good balance between precision and recall, making it a very good choice 
+for this classification task despite the computational cost compared to KNN.
+
+In conclusion, KNN and XGBoost emerged as the top performers, with slightly higher precision 
+and accuracy than the other models, making them ideal for this dataset. Logistic Regression 
+also provided solid performance, while Naive Bayes and Neural Network offered decent results 
+but fell slightly short of the two leading models. SVM had the lowest performance, likely 
+requires further tuning or more iterations to improve its results.
+
+
+\section{Citations for outside models}
+
+\begin{itemize}
+
+  \item[1] Neural Network - 
+  Prior Knowledge. Harvey Kwong has experience building simple neural network architectures in various ML frameworks including Keras.
+  
+  \item[2] XGBoost - 
+  \url{https://xgboost.readthedocs.io/en/stable/get_started.html}
+  
+\end{itemize}
 
 \end{document}

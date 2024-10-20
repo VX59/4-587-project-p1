@@ -401,6 +401,16 @@ INPUT ./figs/nn2.png
 INPUT ./figs/nn2.png
 INPUT ./figs/nn2.png
 INPUT ./figs/nn2.png
+INPUT ./figs/xgb1.png
+INPUT ./figs/xgb1.png
+INPUT ./figs/xgb1.png
+INPUT ./figs/xgb1.png
+INPUT ./figs/xgb1.png
+INPUT ./figs/xgb2.png
+INPUT ./figs/xgb2.png
+INPUT ./figs/xgb2.png
+INPUT ./figs/xgb2.png
+INPUT ./figs/xgb2.png
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
